@@ -1,0 +1,13 @@
+name: test-ci
+
+on:
+  push:
+    branchs: [master]
+
+jobs:
+  preBuild:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v2
+      -name: install
+        run: npm
