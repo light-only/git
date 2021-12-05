@@ -1,13 +1,14 @@
+# 名称
 name: test-ci
 
 on:
   push:
-    branchs: [master]
+    branches: [ master ]
 
 jobs:
-  preBuild:
+  PreBuild:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v2
-      -name: install
+      - uses: actions/checkout@v2
+      - name: Install
         run: yarn
